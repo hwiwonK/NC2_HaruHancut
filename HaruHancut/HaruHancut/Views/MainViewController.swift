@@ -28,7 +28,11 @@ class MainViewController: UIViewController {
     }()
     
     @objc private func clickCreateCardButton() {
-        present(photoPicker, animated: true)
+        let navigationController = UINavigationController(rootViewController: photoPicker)
+        navigationController.isNavigationBarHidden = true
+        navigationController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        present(navigationController, animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {

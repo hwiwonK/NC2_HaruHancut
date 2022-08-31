@@ -21,31 +21,21 @@ extension MainViewController: PHPickerViewControllerDelegate {
 
         return photoPicker
     }
-
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: false)
+    }
+    
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        picker.dismiss(animated: true)
+        if !results.isEmpty {
+            picker.navigationController?.pushViewController(CardLoadingViewController(), animated: true)
 
-        itemProviders = results.map(\.itemProvider)
-        iterator = itemProviders.makeIterator()
-        displayNextImage()
-    }
-    
-    func displayNextImage() {
-        if let itemProvider = iterator?.next(), itemProvider.canLoadObject(ofClass: UIImage.self) {
-            let previousImage = selectedImageView.image
-
-            itemProvider.loadObject(ofClass: UIImage.self) { [weak self] image, error in
-                DispatchQueue.main.async {
-                    // Question: self.selectedImageView.image == previousImage가 필요한 이유?
-                    guard let self = self, let image = image as? UIImage, self.selectedImageView.image == previousImage else { return }
-                    self.selectedImageView.image = image
-                }
-            }
+            itemProviders = results.map(\.itemProvider)
+            iterator = itemProviders.makeIterator()
+            cardMaker.displayNextImage()
+        } else {
+            picker.dismiss(animated: true)
         }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        displayNextImage()
     }
     
 }

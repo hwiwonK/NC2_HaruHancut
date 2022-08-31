@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3175C35F28BFA8B800F22FA7 /* cardMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3175C35E28BFA8B800F22FA7 /* cardMaker.swift */; };
 		31993AC028BEE6F1009E3AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993ABF28BEE6F1009E3AEC /* AppDelegate.swift */; };
 		31993AC228BEE6F1009E3AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993AC128BEE6F1009E3AEC /* SceneDelegate.swift */; };
 		31993AC428BEE6F1009E3AEC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993AC328BEE6F1009E3AEC /* MainViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3175C35E28BFA8B800F22FA7 /* cardMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardMaker.swift; sourceTree = "<group>"; };
 		31993ABC28BEE6F1009E3AEC /* HaruHancut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaruHancut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31993ABF28BEE6F1009E3AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31993AC128BEE6F1009E3AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3175C35D28BFA55600F22FA7 /* Card Maker */ = {
+			isa = PBXGroup;
+			children = (
+				3175C35E28BFA8B800F22FA7 /* cardMaker.swift */,
+			);
+			path = "Card Maker";
+			sourceTree = "<group>";
+		};
 		31993AB328BEE6F1009E3AEC = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		31993ABE28BEE6F1009E3AEC /* HaruHancut */ = {
 			isa = PBXGroup;
 			children = (
+				3175C35D28BFA55600F22FA7 /* Card Maker */,
 				31993AD428BEF883009E3AEC /* Views */,
 				31993AD328BEF871009E3AEC /* Models */,
 				31993ABF28BEE6F1009E3AEC /* AppDelegate.swift */,
@@ -160,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3175C35F28BFA8B800F22FA7 /* cardMaker.swift in Sources */,
 				31993ADA28BF5211009E3AEC /* CardLoadingViewController.swift in Sources */,
 				31993AC428BEE6F1009E3AEC /* MainViewController.swift in Sources */,
 				31993AD828BF4C7C009E3AEC /* PhotoPicker.swift in Sources */,

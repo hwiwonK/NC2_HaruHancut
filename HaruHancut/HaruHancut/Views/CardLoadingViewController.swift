@@ -8,22 +8,41 @@
 import UIKit
 
 class CardLoadingViewController: UIViewController {
+    
+    private let textLabel : UILabel = {
+        let label = UILabel()
+        label.text = "Loading..."
+        
+        return label
+    }()
+    
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        cardMaker.displayNextImage()
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setLayout() {
+        view.backgroundColor = .systemBackground
+        
+        self.view.addSubview(textLabel)
+        
+        [textLabel].forEach { component in
+            component.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
+        let textLabelConstraints = [
+            textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            textLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ]
+        
+        [textLabelConstraints].forEach { constraints in
+            NSLayoutConstraint.activate(constraints)
+        }
     }
-    */
 
 }
