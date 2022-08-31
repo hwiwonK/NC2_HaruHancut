@@ -8,15 +8,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    var itemProviders: [NSItemProvider] = []
+    var iterator: IndexingIterator<[NSItemProvider]>?
 
-    private let tableTitleLabel : UILabel = {
-        let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .body)
-        label.adjustsFontForContentSizeCategory = true
-        label.textColor = UIColor.systemGray
-        label.text = "Hello, world!"
-        return label
-    }()
+    var selectedImageView = UIImageView()
     
     private let createCardButton : UIButton = {
         var configuration = UIButton.Configuration.filled()
@@ -26,9 +22,14 @@ class MainViewController: UIViewController {
         configuration.attributedTitle?.font = UIFont.preferredFont(forTextStyle: .title2)
         
         let button = UIButton(configuration: configuration)
+        button.addTarget(self, action: #selector(clickCreateCardButton), for: .touchUpInside)
         
         return button
     }()
+    
+    @objc private func clickCreateCardButton() {
+        present(photoPicker, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +40,10 @@ class MainViewController: UIViewController {
     private func setLayout() {
         view.backgroundColor = .systemBackground
         
+        self.view.addSubview(selectedImageView)
         self.view.addSubview(createCardButton)
         
-        [createCardButton].forEach { component in
+        [selectedImageView, createCardButton].forEach { component in
             component.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -52,7 +54,14 @@ class MainViewController: UIViewController {
             createCardButton.heightAnchor.constraint(equalToConstant: 60)
         ]
         
-        [createCardButtonConstraints].forEach { constraints in
+        let selectedImageViewConstraints = [
+            selectedImageView.heightAnchor.constraint(equalToConstant: 200),
+            selectedImageView.widthAnchor.constraint(equalToConstant: 200),
+            selectedImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            selectedImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30)
+        ]
+        
+        [selectedImageViewConstraints, createCardButtonConstraints].forEach { constraints in
             NSLayoutConstraint.activate(constraints)
         }
     }

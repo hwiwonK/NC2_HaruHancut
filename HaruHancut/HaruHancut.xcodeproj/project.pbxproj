@@ -13,6 +13,8 @@
 		31993AC728BEE6F1009E3AEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31993AC528BEE6F1009E3AEC /* Main.storyboard */; };
 		31993AC928BEE6F2009E3AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31993AC828BEE6F2009E3AEC /* Assets.xcassets */; };
 		31993ACC28BEE6F2009E3AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31993ACA28BEE6F2009E3AEC /* LaunchScreen.storyboard */; };
+		31993AD828BF4C7C009E3AEC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993AD728BF4C7C009E3AEC /* PhotoPicker.swift */; };
+		31993ADA28BF5211009E3AEC /* CardLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993AD928BF5211009E3AEC /* CardLoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		31993AC828BEE6F2009E3AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31993ACB28BEE6F2009E3AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31993ACD28BEE6F2009E3AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31993AD728BF4C7C009E3AEC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		31993AD928BF5211009E3AEC /* CardLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				31993AC328BEE6F1009E3AEC /* MainViewController.swift */,
+				31993AD728BF4C7C009E3AEC /* PhotoPicker.swift */,
+				31993AD928BF5211009E3AEC /* CardLoadingViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31993ADA28BF5211009E3AEC /* CardLoadingViewController.swift in Sources */,
 				31993AC428BEE6F1009E3AEC /* MainViewController.swift in Sources */,
+				31993AD828BF4C7C009E3AEC /* PhotoPicker.swift in Sources */,
 				31993AC028BEE6F1009E3AEC /* AppDelegate.swift in Sources */,
 				31993AC228BEE6F1009E3AEC /* SceneDelegate.swift in Sources */,
 			);
