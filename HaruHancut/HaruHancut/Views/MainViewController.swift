@@ -18,7 +18,17 @@ class MainViewController: UIViewController {
         return label
     }()
     
-    
+    private let createCardButton : UIButton = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.baseBackgroundColor = UIColor(named: "mainBeige")
+        configuration.background.cornerRadius = 10
+        configuration.title = "한 컷 만들기"
+        configuration.attributedTitle?.font = UIFont.preferredFont(forTextStyle: .title2)
+        
+        let button = UIButton(configuration: configuration)
+        
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +39,20 @@ class MainViewController: UIViewController {
     private func setLayout() {
         view.backgroundColor = .systemBackground
         
-        self.view.addSubview(tableTitleLabel)
+        self.view.addSubview(createCardButton)
         
-        [tableTitleLabel].forEach { component in
+        [createCardButton].forEach { component in
             component.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        let tableTitleLabelConstraints = [
-            tableTitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            tableTitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+        let createCardButtonConstraints = [
+            createCardButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 505),
+            createCardButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 95),
+            createCardButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -95),
+            createCardButton.heightAnchor.constraint(equalToConstant: 60)
         ]
         
-        [tableTitleLabelConstraints].forEach { constraints in
+        [createCardButtonConstraints].forEach { constraints in
             NSLayoutConstraint.activate(constraints)
         }
     }
