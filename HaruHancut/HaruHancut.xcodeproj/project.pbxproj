@@ -14,6 +14,7 @@
 		317C923428C13E8A00DA71F3 /* MaruBuri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 317C922E28C13E7800DA71F3 /* MaruBuri-Light.ttf */; };
 		317C923528C13E8C00DA71F3 /* MaruBuri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 317C922D28C13E7800DA71F3 /* MaruBuri-Regular.ttf */; };
 		317C923628C13E8F00DA71F3 /* MaruBuri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 317C923028C13E7800DA71F3 /* MaruBuri-SemiBold.ttf */; };
+		317C923928C141F300DA71F3 /* 12313-photo.json in Resources */ = {isa = PBXBuildFile; fileRef = 317C923828C141F300DA71F3 /* 12313-photo.json */; };
 		31993AC028BEE6F1009E3AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993ABF28BEE6F1009E3AEC /* AppDelegate.swift */; };
 		31993AC228BEE6F1009E3AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993AC128BEE6F1009E3AEC /* SceneDelegate.swift */; };
 		31993AC428BEE6F1009E3AEC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993AC328BEE6F1009E3AEC /* MainViewController.swift */; };
@@ -33,6 +34,7 @@
 		317C922F28C13E7800DA71F3 /* MaruBuri-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-ExtraLight.ttf"; sourceTree = "<group>"; };
 		317C923028C13E7800DA71F3 /* MaruBuri-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-SemiBold.ttf"; sourceTree = "<group>"; };
 		317C923128C13E7800DA71F3 /* MaruBuri-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Bold.ttf"; sourceTree = "<group>"; };
+		317C923828C141F300DA71F3 /* 12313-photo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "12313-photo.json"; sourceTree = "<group>"; };
 		31993ABC28BEE6F1009E3AEC /* HaruHancut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaruHancut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31993ABF28BEE6F1009E3AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31993AC128BEE6F1009E3AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		317C923728C141E200DA71F3 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				317C923828C141F300DA71F3 /* 12313-photo.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		31993AB328BEE6F1009E3AEC = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		31993ABE28BEE6F1009E3AEC /* HaruHancut */ = {
 			isa = PBXGroup;
 			children = (
+				317C923728C141E200DA71F3 /* Animation */,
 				31994C9628C13B0500BF3822 /* Font */,
 				3175C36428BFD12600F22FA7 /* Extensions */,
 				3175C35D28BFA55600F22FA7 /* Card Maker */,
@@ -198,6 +209,7 @@
 				317C923428C13E8A00DA71F3 /* MaruBuri-Light.ttf in Resources */,
 				31993ACC28BEE6F2009E3AEC /* LaunchScreen.storyboard in Resources */,
 				31993AC928BEE6F2009E3AEC /* Assets.xcassets in Resources */,
+				317C923928C141F300DA71F3 /* 12313-photo.json in Resources */,
 				317C923528C13E8C00DA71F3 /* MaruBuri-Regular.ttf in Resources */,
 				317C923628C13E8F00DA71F3 /* MaruBuri-SemiBold.ttf in Resources */,
 				317C923228C13E8400DA71F3 /* MaruBuri-Bold.ttf in Resources */,
