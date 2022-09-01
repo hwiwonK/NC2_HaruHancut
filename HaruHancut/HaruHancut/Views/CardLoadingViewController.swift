@@ -15,11 +15,6 @@ class CardLoadingViewController: UIViewController {
         
         return label
     }()
-    
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        cardMaker.displayNextImage()
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -20,23 +20,18 @@ class cardMaker {
         iterator = itemProviders.makeIterator()
     }
     
-    static func displayNextImage() {
-        if let itemProvider = iterator?.next(), itemProvider.canLoadObject(ofClass: UIImage.self) {
-            itemProvider.loadObject(ofClass: UIImage.self) { image, error in
+    static func runMoodClassification() {
+        itemProviders.forEach { item in
+            item.loadObject(ofClass: UIImage.self) { image, error in
                 DispatchQueue.main.async {
-                    print("displayNextImage start")
                     guard let image = image as? UIImage else { return }
                     getImageMood(inputImage: image)
                 }
             }
         }
-        
-        print("displayNextImage finish")
     }
     
-    static func getImageMood(inputImage : UIImage) {
-        print("mood classification start")
-        
+    static func getImageMood(inputImage : UIImage) {        
         guard let convertedInputImage = inputImage.convertToBuffer() else { return }
         
         guard let imageMoodOutput = try? imageMoodModel.prediction(image: convertedInputImage) else {
