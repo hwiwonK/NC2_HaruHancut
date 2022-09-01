@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3175C35F28BFA8B800F22FA7 /* cardMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3175C35E28BFA8B800F22FA7 /* cardMaker.swift */; };
 		3175C36328BFC98700F22FA7 /* ImageMoodClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3175C36228BFC98700F22FA7 /* ImageMoodClassification.mlmodel */; };
+		317C923228C13E8400DA71F3 /* MaruBuri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 317C923128C13E7800DA71F3 /* MaruBuri-Bold.ttf */; };
+		317C923328C13E8700DA71F3 /* MaruBuri-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 317C922F28C13E7800DA71F3 /* MaruBuri-ExtraLight.ttf */; };
+		317C923428C13E8A00DA71F3 /* MaruBuri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 317C922E28C13E7800DA71F3 /* MaruBuri-Light.ttf */; };
+		317C923528C13E8C00DA71F3 /* MaruBuri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 317C922D28C13E7800DA71F3 /* MaruBuri-Regular.ttf */; };
+		317C923628C13E8F00DA71F3 /* MaruBuri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 317C923028C13E7800DA71F3 /* MaruBuri-SemiBold.ttf */; };
 		31993AC028BEE6F1009E3AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993ABF28BEE6F1009E3AEC /* AppDelegate.swift */; };
 		31993AC228BEE6F1009E3AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993AC128BEE6F1009E3AEC /* SceneDelegate.swift */; };
 		31993AC428BEE6F1009E3AEC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31993AC328BEE6F1009E3AEC /* MainViewController.swift */; };
@@ -23,6 +28,11 @@
 /* Begin PBXFileReference section */
 		3175C35E28BFA8B800F22FA7 /* cardMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardMaker.swift; sourceTree = "<group>"; };
 		3175C36228BFC98700F22FA7 /* ImageMoodClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageMoodClassification.mlmodel; sourceTree = "<group>"; };
+		317C922D28C13E7800DA71F3 /* MaruBuri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Regular.ttf"; sourceTree = "<group>"; };
+		317C922E28C13E7800DA71F3 /* MaruBuri-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Light.ttf"; sourceTree = "<group>"; };
+		317C922F28C13E7800DA71F3 /* MaruBuri-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-ExtraLight.ttf"; sourceTree = "<group>"; };
+		317C923028C13E7800DA71F3 /* MaruBuri-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-SemiBold.ttf"; sourceTree = "<group>"; };
+		317C923128C13E7800DA71F3 /* MaruBuri-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Bold.ttf"; sourceTree = "<group>"; };
 		31993ABC28BEE6F1009E3AEC /* HaruHancut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaruHancut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31993ABF28BEE6F1009E3AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31993AC128BEE6F1009E3AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +92,7 @@
 		31993ABE28BEE6F1009E3AEC /* HaruHancut */ = {
 			isa = PBXGroup;
 			children = (
+				31994C9628C13B0500BF3822 /* Font */,
 				3175C36428BFD12600F22FA7 /* Extensions */,
 				3175C35D28BFA55600F22FA7 /* Card Maker */,
 				31993AD428BEF883009E3AEC /* Views */,
@@ -112,6 +123,18 @@
 				31993AD928BF5211009E3AEC /* CardLoadingViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		31994C9628C13B0500BF3822 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				317C923128C13E7800DA71F3 /* MaruBuri-Bold.ttf */,
+				317C922F28C13E7800DA71F3 /* MaruBuri-ExtraLight.ttf */,
+				317C922E28C13E7800DA71F3 /* MaruBuri-Light.ttf */,
+				317C922D28C13E7800DA71F3 /* MaruBuri-Regular.ttf */,
+				317C923028C13E7800DA71F3 /* MaruBuri-SemiBold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,9 +195,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317C923428C13E8A00DA71F3 /* MaruBuri-Light.ttf in Resources */,
 				31993ACC28BEE6F2009E3AEC /* LaunchScreen.storyboard in Resources */,
 				31993AC928BEE6F2009E3AEC /* Assets.xcassets in Resources */,
+				317C923528C13E8C00DA71F3 /* MaruBuri-Regular.ttf in Resources */,
+				317C923628C13E8F00DA71F3 /* MaruBuri-SemiBold.ttf in Resources */,
+				317C923228C13E8400DA71F3 /* MaruBuri-Bold.ttf in Resources */,
 				31993AC728BEE6F1009E3AEC /* Main.storyboard in Resources */,
+				317C923328C13E8700DA71F3 /* MaruBuri-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
