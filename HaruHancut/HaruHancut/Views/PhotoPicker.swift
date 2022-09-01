@@ -30,7 +30,7 @@ extension MainViewController: PHPickerViewControllerDelegate {
         if !results.isEmpty {
             picker.navigationController?.pushViewController(CardLoadingViewController(), animated: true)
             cardMaker.setInputImages(results: results) //선택한 이미지 저장
-            cardMaker.runMoodClassification() //현재 이미지에 대한 분석 시작
+            cardMaker.runMoodClassification() //선택된 이미지에 대한 분위기 분류 시작
         } else {
             picker.dismiss(animated: true)
         }
