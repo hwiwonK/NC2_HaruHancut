@@ -28,11 +28,10 @@ extension MainViewController: PHPickerViewControllerDelegate {
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         if !results.isEmpty {
+            print(results)
             picker.navigationController?.pushViewController(CardLoadingViewController(), animated: true)
-
-            itemProviders = results.map(\.itemProvider)
-            iterator = itemProviders.makeIterator()
-            cardMaker.displayNextImage()
+            cardMaker.setInputImages(results: results) //선택한 이미지 저장
+            cardMaker.displayNextImage() //현재 이미지에 대한 분석 시작
         } else {
             picker.dismiss(animated: true)
         }
